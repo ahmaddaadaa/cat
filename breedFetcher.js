@@ -14,8 +14,8 @@ request(url, (error, response, body) => {
   else {
 
       const data = JSON.parse(body);
-      console.log(data);
-      console.log(typeof data);
+      console.log(data[0].description);
+      //console.log(typeof data);
 
   }
 });
