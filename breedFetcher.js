@@ -8,14 +8,13 @@ request(url, (error, response, body) => {
     console.error('Error:', error);
   } else if (response.statusCode !== 200) {
     console.error('Request failed with status code:', response.statusCode);
-  } else if(JSON.parse(body).length === 0){
+  } else if (JSON.parse(body).length === 0) {
     console.error('Error: no breed is found');
-  }
-  else {
+  } else {
 
-      const data = JSON.parse(body);
-      console.log(data[0].description);
-      //console.log(typeof data);
+    const data = JSON.parse(body);
+    console.log(data[0].description);
+    //console.log(typeof data);
 
   }
 });
